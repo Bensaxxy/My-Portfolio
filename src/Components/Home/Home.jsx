@@ -64,50 +64,50 @@ const Home = () => {
       animate="visible"
       exit="hidden"
       variants={containerVariants}
-      className={`relative h-screen w-full grid gap-6 container-none ${
-        isDesktop ? "md:grid-cols-2" : "container"
+      className={`relative h-screen w-full grid gap-6 ${
+        isDesktop ? "md:grid-cols-2" : "grid-cols-1"
       }`}
     >
-      {/* left section that carried the content */}
-      <div className=" w-full px-4 md:px-6 flex h-screen justify-center items-start flex-col gap-2">
+      {/* left section with content */}
+      <div className="w-full px-4 md:px-6 flex h-screen justify-center items-start flex-col gap-4">
         <MotionText
           variants={textVariants}
-          className=" uppercase text-black font-bold text-xl md:text-2xl"
+          className="uppercase text-black font-bold text-xl md:text-2xl"
         >
           hi there! 👋🏾
         </MotionText>
-        <h1 className=" font-extrabold text-6xl md:text-7xl uppercase">
+        <h1 className="font-extrabold text-7xl md:text-7xl uppercase">
           i'm <span className="text-primary font-bold text-7xl">Benjamin</span>
         </h1>
-        <div className=" bg-primary py-2 px-4">
-          <h3 className="  text-gray font-semibold">
+        <div className="bg-primary py-2 px-4">
+          <h3 className="text-gray font-semibold">
             Frontend Developer / Graphic Designer
           </h3>
         </div>
-        <p className=" text-sm md:text-sm lg:text-base font-medium py-4">
+        <p className="text-sm md:text-sm lg:text-base font-medium py-4">
           As a versatile and creative professional, I wear two hats: Frontend
           Developer and Graphic Designer. With a passion for building engaging
           and user-friendly digital experiences, I bring a unique combination of
           technical and design skills to the table.
         </p>
 
-        {/* about me more btn */}
+        {/* About me button */}
         <MotionButton
           variants={containerVariants}
           onClick={handleNavigate}
-          className=" hover:text-secondary duration-300 hover:bg-primary/95 bg-primary text-gray rounded-full px-4 py-2"
+          className="hover:text-secondary duration-300 hover:bg-primary/95 bg-primary text-gray rounded-full px-4 py-2"
         >
           <Link to="/about-me" className="block w-full h-full text-inherit">
             More About Me
           </Link>
         </MotionButton>
-        <div className=" flex justify-end items-end mb-4">
+        <div className="flex justify-end items-end mb-4">
           <SocialLinks />
         </div>
       </div>
 
-      {/* right section that carried the image */}
-      <div>
+      {/* right section with image */}
+      <div className="w-full flex justify-center items-center">
         <HomePics />
       </div>
     </motion.div>

@@ -64,7 +64,7 @@ const Home = () => {
       animate="visible"
       exit="hidden"
       variants={containerVariants}
-      className={`relative h-screen w-screen grid gap-6 container-none ${
+      className={`relative h-screen w-full grid gap-6 container-none ${
         isDesktop ? "md:grid-cols-2" : "container"
       }`}
     >

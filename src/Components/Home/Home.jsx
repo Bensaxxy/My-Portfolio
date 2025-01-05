@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HomePics from "./HomePics";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -40,13 +40,33 @@ const Home = () => {
     hover: { scale: 1.8, transition: { yoyo: Infinity, duration: 0.3 } },
   };
 
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768); // Set to desktop size (md and above)
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <motion.div
       initial="hidden"
       animate="visible"
       exit="hidden"
       variants={containerVariants}
-      className=" overflow-x-hidden relative h-screen w-screen px-8 md:px-0 grid md:grid-cols-2 gap-6"
+      className={`relative h-screen w-screen grid gap-6 container-none ${
+        isDesktop ? "md:grid-cols-2" : "container"
+      }`}
     >
       {/* left section that carried the content */}
       <div className=" w-full px-4 md:px-6 flex h-screen justify-center items-start flex-col gap-2">

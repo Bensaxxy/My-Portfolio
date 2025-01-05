@@ -65,19 +65,19 @@ const Home = () => {
       exit="hidden"
       variants={containerVariants}
       className={`relative h-screen w-full grid gap-6 ${
-        isDesktop ? "md:grid-cols-2" : "grid-cols-1"
+        isDesktop ? "md:grid-cols-2" : "grid-cols-1 container"
       }`}
     >
       {/* left section with content */}
       <div className="w-full px-4 md:px-6 flex h-screen justify-center items-start flex-col gap-4">
         <MotionText
           variants={textVariants}
-          className="uppercase text-black font-bold text-xl md:text-2xl"
+          className="uppercase text-black font-bold text-[18px] md:text-2xl"
         >
           hi there! 👋🏾
         </MotionText>
-        <h1 className="font-extrabold text-7xl md:text-7xl uppercase">
-          i'm <span className="text-primary font-bold text-7xl">Benjamin</span>
+        <h1 className="font-extrabold text-5xl md:text-7xl uppercase">
+          i'm <span className="text-primary font-bold text-6xl">Benjamin</span>
         </h1>
         <div className="bg-primary py-2 px-4">
           <h3 className="text-gray font-semibold">

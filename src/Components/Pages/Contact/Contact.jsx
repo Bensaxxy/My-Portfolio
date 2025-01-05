@@ -33,7 +33,7 @@ const Contact = () => {
           <div className=" flex my-6 items-center gap-1">
             <IoMailOpen className=" text-primary" />
             <a
-              href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+              href="#"
               target="_blank"
               className=" font-semibold text-primary "
             >

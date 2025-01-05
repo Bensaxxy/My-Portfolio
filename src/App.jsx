@@ -122,7 +122,7 @@ const App = () => {
         </AnimatePresence>
       </div>
       {/* Mini Sidebar */}
-      <div className="fixed bottom-0 md:top-1/2 md:right-2 md:transform md:-translate-y-1/2 w-full md:w-auto flex justify-center items-center">
+      <div className="fixed bottom-3 md:bottom-0 md:top-1/2 md:right-2 md:transform md:-translate-y-1/2 w-full md:w-auto flex justify-center items-center">
         <MiniSideBar />
       </div>
     </div>

@@ -46,7 +46,7 @@ const Home = () => {
       animate="visible"
       exit="hidden"
       variants={containerVariants}
-      className=" relative h-screen w-screen px-8 md:px-0 grid md:grid-cols-2 gap-6"
+      className=" relative md:h-screen w-screen px-8 md:px-0 grid md:grid-cols-2 gap-6"
     >
       {/* left section that carried the content */}
       <div className=" w-full px-4 md:px-6 flex h-screen justify-center items-start flex-col gap-2">

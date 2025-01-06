@@ -56,6 +56,15 @@ const data = [
       code: "https://github.com/Bensaxxy/Alinee-Photographer",
     },
   },
+  {
+    id: 7,
+    title: "Age Calculator",
+    imageUrl: "./age-cal.png",
+    links: {
+      demo: "https://age-calculator-b.netlify.app/",
+      code: "https://github.com/Bensaxxy/age-calculator",
+    },
+  },
 ];
 
 export default data;

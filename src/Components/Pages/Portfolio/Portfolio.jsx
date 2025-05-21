@@ -1,5 +1,5 @@
 /** @format */
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import WebDesign from "./WebDesign.jsx";
 import GraphicDesign from "./GraphicDesign";

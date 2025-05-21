@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+// import React from "react";
 import { CiPhone } from "react-icons/ci";
 
 const PhoneCall = () => {

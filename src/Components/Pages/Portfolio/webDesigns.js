@@ -3,6 +3,14 @@
 const data = [
   {
     id: 1,
+    title: "Nexus Botix",
+    imageUrl: "./nexusbotix.png",
+    links: {
+      demo: "https://nexusbotix.io/",
+    },
+  },
+  {
+    id: 2,
     title: "Clone Netflix",
     imageUrl: "./netflix-img.png",
     links: {
@@ -11,7 +19,7 @@ const data = [
     },
   },
   {
-    id: 2,
+    id: 3,
     title: "Audiophile",
     imageUrl: "./Audiop.png",
     links: {
@@ -20,7 +28,7 @@ const data = [
     },
   },
   {
-    id: 3,
+    id: 4,
     title: "Multi-step form",
     imageUrl: "./multi-step-form.png",
     links: {
@@ -29,7 +37,7 @@ const data = [
     },
   },
   {
-    id: 4,
+    id: 5,
     title: "Shoe E-commerce",
     imageUrl: "./show-ecommece.png",
     links: {
@@ -39,7 +47,7 @@ const data = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "Product List",
     imageUrl: "./Product-list.png",
     links: {
@@ -48,7 +56,7 @@ const data = [
     },
   },
   {
-    id: 6,
+    id: 7,
     title: "Alinee Photographer Portfolio",
     imageUrl: "./alinee-photo.png",
     links: {
@@ -57,7 +65,7 @@ const data = [
     },
   },
   {
-    id: 7,
+    id: 8,
     title: "Age Calculator",
     imageUrl: "./age-cal.png",
     links: {

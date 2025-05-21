@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+// import React from "react";
 import { IoMailOpen } from "react-icons/io5";
 import { Mail } from "./Mail";
 import PhoneCall from "./PhoneCall";
@@ -23,10 +23,10 @@ const Contact = () => {
               Feel <span className=" font-bold">Free</span> to contact me
             </h1>
             <p className=" font-medium text-sm leading-6 md:text-md">
-              For inquiries about my services, please don't hesitate to drop me
-              a line. I'm passionate about delivering high-quality frontend
+              For inquiries about my services, please dont hesitate to drop me
+              a line. I am passionate about delivering high-quality frontend
               solutions and would be delighted to discuss how I can help bring
-              your project to life. Let's get in touch and explore the
+              your project to life. Lets get in touch and explore the
               possibilities.
             </p>
           </div>

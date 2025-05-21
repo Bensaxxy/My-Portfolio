@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion"; // Import framer-motion
 import printDesign from "/print-design.png";
 import webDesign from "/web-design.png";
@@ -59,14 +59,14 @@ const AboutMe = () => {
         {/* About Me Name and Intro */}
         <motion.div variants={childVariants} className="mt-14">
           <h2 className="text-center md:text-left text-xl lg:text-2xl font-light my-6">
-            I'm <span className="font-bold">Oluwasegun Benjamin,</span> Frontend
+            I&apos;m <span className="font-bold">Oluwasegun Benjamin,</span> Frontend
             Developer / Graphic Designer
           </h2>
           <p className="text-sm text-center md:text-left md:text-[15px] leading-7 mb-6">
-            With 5 years of experience in frontend development, I've honed my
+            With 5 years of experience in frontend development, I&apos;ve honed my
             skills in crafting responsive, accessible, and high-performance web
             applications using Git, Github, HTML, CSS, JavaScript, and popular
-            frameworks like Bootstrap, TailwindCSS, React and NextJs. I'm driven
+            frameworks like Bootstrap, TailwindCSS, React and NextJs. I&apos;m driven
             by a passion for innovation, creativity, and problem-solving.
           </p>
         </motion.div>

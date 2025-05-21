@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-key */
 /** @format */
 
-import React from "react";
+// import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbWorldWww } from "react-icons/tb";
 import data from "../Portfolio/webDesigns";
@@ -32,6 +33,8 @@ const WebDesign = () => {
                 </button>
               </a>
 
+          {/* GitHub Icon (Conditional) */}
+            {project.links.code && (
               <a
                 href={project.links.code}
                 target="_blank"
@@ -41,6 +44,7 @@ const WebDesign = () => {
                   <FaGithub className="text-xl text-black" />
                 </button>
               </a>
+                  )}
             </div>
           </div>
           {/* Title */}

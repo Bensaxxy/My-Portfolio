@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export const Mail = () => {
@@ -21,9 +21,9 @@ export const Mail = () => {
         () => {
           console.log("SUCCESS!");
           console.log("message sent");
-          form.current.reset(); // Clear the form
-          setMessageSent(true); // Show success message
-          setTimeout(() => setMessageSent(false), 5000); // Hide success message after 5 seconds
+          form.current.reset(); 
+          setMessageSent(true); 
+          setTimeout(() => setMessageSent(false), 5000); 
         },
         (error) => {
           console.log("FAILED...", error.text);

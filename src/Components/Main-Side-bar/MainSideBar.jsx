@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+// import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion"; // Import motion for animations
 import sideImage from "/side-bar-img.jpg";
@@ -28,7 +28,7 @@ const MainSideBar = () => {
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="h-screen hidden lg:block w-full max-w-[20%] fixed bg-primary"
+        className="h-screen hidden lg:block w-full max-w-[20%] fixed bg-primary dark:bg-secondary"
       >
         {/* Sidebar Content */}
         <img
@@ -36,7 +36,7 @@ const MainSideBar = () => {
           src={sideImage}
           alt="homePics"
         />
-        <div className="font-semibold flex flex-col justify-center items-center gap-8 text-gray mt-20">
+        <div className="font-semibold flex flex-col justify-center items-center gap-8 text-gray dark:text-black mt-20">
           {/* Navigation Links */}
           {[
             { path: "/", label: "HOME" },
@@ -51,8 +51,8 @@ const MainSideBar = () => {
               to={link.path}
               className={({ isActive }) =>
                 isActive
-                  ? "text-secondary"
-                  : "text-gray duration-300 hover:text-secondary"
+                  ? "text-secondary dark:text-black"
+                  : "text-gray duration-300 hover:text-secondary dark:hover:text-primary"
               }
             >
               {link.label}

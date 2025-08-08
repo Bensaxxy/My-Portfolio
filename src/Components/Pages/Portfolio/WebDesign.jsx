@@ -17,7 +17,7 @@ const WebDesign = () => {
               <img
                 src={project.imageUrl}
                 alt={project.title}
-                className="w-full h-[200px] object-center object-cover  transition-transform duration-500 ease-in-out group-hover:scale-110"
+                className="w-full h-[200px] object-center object-cover  transition-transform duration-500 ease-in-out group-hover:scale-110 dark:text-white"
               />
             </div>
             {/* Overlay */}
@@ -33,22 +33,22 @@ const WebDesign = () => {
                 </button>
               </a>
 
-          {/* GitHub Icon (Conditional) */}
-            {project.links.code && (
-              <a
-                href={project.links.code}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="p-3 bg-white rounded-full shadow-lg hover:bg-gray transition duration-300">
-                  <FaGithub className="text-xl text-black" />
-                </button>
-              </a>
-                  )}
+              {/* GitHub Icon (Conditional) */}
+              {project.links.code && (
+                <a
+                  href={project.links.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="p-3 bg-white rounded-full shadow-lg hover:bg-gray transition duration-300">
+                    <FaGithub className="text-xl text-black" />
+                  </button>
+                </a>
+              )}
             </div>
           </div>
           {/* Title */}
-          <h1 className="text-center mt-4 text-lg font-semibold">
+          <h1 className="text-center mt-4 text-lg font-semibold dark:text-white">
             {project.title}
           </h1>
         </div>

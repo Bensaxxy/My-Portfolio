@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import HomePics from "./HomePics";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -36,9 +36,9 @@ const Home = () => {
     },
   };
 
-  const buttonVariants = {
-    hover: { scale: 1.8, transition: { yoyo: Infinity, duration: 0.3 } },
-  };
+  // const buttonVariants = {
+  //   hover: { scale: 1.8, transition: { yoyo: Infinity, duration: 0.3 } },
+  // };
 
   const [isDesktop, setIsDesktop] = useState(false);
 
@@ -64,7 +64,7 @@ const Home = () => {
       animate="visible"
       exit="hidden"
       variants={containerVariants}
-      className={`relative h-screen w-full grid gap-6 ${
+      className={`relative dark:bg-black h-screen w-full grid gap-6 ${
         isDesktop ? "md:grid-cols-2" : "grid-cols-1 container"
       }`}
     >
@@ -72,19 +72,22 @@ const Home = () => {
       <div className="w-full px-4 md:px-6 flex h-screen justify-center items-start flex-col gap-4">
         <MotionText
           variants={textVariants}
-          className="uppercase text-black font-bold text-[18px] md:text-2xl"
+          className="uppercase text-black dark:text-gray font-bold text-[18px] md:text-2xl"
         >
           hi there! 👋🏾
         </MotionText>
-        <h1 className="font-extrabold text-5xl md:text-7xl uppercase">
-          i'm <span className="text-primary font-bold text-6xl">Benjamin</span>
+        <h1 className="font-extrabold dark:text-gray text-5xl md:text-7xl uppercase">
+          i&apos;m{" "}
+          <span className="text-primary dark:text-secondary font-bold text-6xl">
+            Benjamin
+          </span>
         </h1>
-        <div className="bg-primary py-2 px-4">
-          <h3 className="text-gray font-semibold">
+        <div className="bg-primary dark:bg-secondary py-2 px-4">
+          <h3 className="text-gray dark:text-black font-semibold">
             Frontend Developer / Graphic Designer
           </h3>
         </div>
-        <p className="text-sm md:text-sm lg:text-base font-medium py-4">
+        <p className="text-sm md:text-sm lg:text-base font-medium py-4 dark:text-white">
           As a versatile and creative professional, I wear two hats: Frontend
           Developer and Graphic Designer. With a passion for building engaging
           and user-friendly digital experiences, I bring a unique combination of
@@ -95,9 +98,12 @@ const Home = () => {
         <MotionButton
           variants={containerVariants}
           onClick={handleNavigate}
-          className="hover:text-secondary duration-300 hover:bg-primary/95 bg-primary text-gray rounded-full px-4 py-2"
+          className="hover:text-secondary duration-300 dark:hover:bg-white hover:bg-primary/95 bg-primary dark:bg-secondary text-gray rounded-full px-4 py-2"
         >
-          <Link to="/about-me" className="block w-full h-full text-inherit">
+          <Link
+            to="/about-me"
+            className="block w-full h-full text-inherit dark:text-black"
+          >
             More About Me
           </Link>
         </MotionButton>

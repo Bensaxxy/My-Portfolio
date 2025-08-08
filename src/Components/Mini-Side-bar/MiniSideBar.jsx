@@ -1,25 +1,29 @@
 /** @format */
 
-import React from "react";
+// import React from "react";
 import { FaHome } from "react-icons/fa";
 import { MdPerson, MdWork } from "react-icons/md";
 import { IoIosSchool } from "react-icons/io";
 import { HiSpeakerphone } from "react-icons/hi";
 import { FaPhoneVolume } from "react-icons/fa6";
-import { NavLink } from "react-router-dom"; // Import NavLink from react-router-dom
+import { NavLink } from "react-router-dom";
+import DarkMode from "../DarkMode";
 
 const MiniSideBar = () => {
   return (
     <div>
-      <div className=" grid-cols-6 md:grid-cols-1 bg-primary/90 md:bg-primary px-2 py-4 rounded-full text-gray grid gap-8">
+      <div className=" grid-cols-7 md:grid-cols-1 bg-primary/90 md:bg-primary dark:bg-secondary px-2 py-4 rounded-full text-gray grid gap-8">
+        <div className="flex items-center justify-center">
+          <DarkMode />
+        </div>
         {/* Active styling using NavLink */}
         {/* Home link */}
         <NavLink
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "text-secondary"
-              : "text-gray  duration-300 hover:text-secondary"
+              ? "text-secondary dark:text-black dark:hover:text-primary"
+              : "text-gray duration-300 hover:text-secondary "
           }
         >
           <FaHome className=" cursor-pointer duration-300" size={20} />
@@ -30,12 +34,12 @@ const MiniSideBar = () => {
           to="/about-me"
           className={({ isActive }) =>
             isActive
-              ? "text-secondary "
-              : "text-gray  duration-300 hover:text-secondary"
+              ? "text-secondary dark:text-black dark:hover:text-primary"
+              : "text-gray duration-300 hover:text-secondary "
           }
         >
           <MdPerson
-            className=" cursor-pointer duration-300 hover:text-secondary"
+            className=" cursor-pointer duration-300 hover:text-secondary dark:hover:text-primary"
             size={20}
           />
         </NavLink>
@@ -45,12 +49,12 @@ const MiniSideBar = () => {
           to="/resume"
           className={({ isActive }) =>
             isActive
-              ? "text-secondary "
-              : "text-gray  duration-300 hover:text-secondary"
+              ? "text-secondary dark:text-black dark:hover:text-primary"
+              : "text-gray duration-300 hover:text-secondary"
           }
         >
           <IoIosSchool
-            className=" cursor-pointer duration-300 hover:text-secondary"
+            className=" cursor-pointer duration-300 hover:text-secondary dark:hover:text-primary"
             size={20}
           />
         </NavLink>
@@ -60,12 +64,12 @@ const MiniSideBar = () => {
           to="/portfolio"
           className={({ isActive }) =>
             isActive
-              ? "text-secondary "
-              : "text-gray duration-300 hover:text-secondary"
+              ? "text-secondary dark:text-black dark:hover:text-primary"
+              : "text-gray duration-300 hover:text-secondary "
           }
         >
           <MdWork
-            className=" cursor-pointer duration-300 hover:text-secondary"
+            className=" cursor-pointer duration-300 hover:text-secondary dark:hover:text-primary"
             size={20}
           />
         </NavLink>
@@ -75,12 +79,12 @@ const MiniSideBar = () => {
           to="/testimonials"
           className={({ isActive }) =>
             isActive
-              ? "text-secondary "
-              : "text-gray  duration-300 hover:text-secondary"
+              ? "text-secondary dark:text-black dark:hover:text-primary"
+              : "text-gray duration-300 hover:text-secondary dark:hover:text-primary/50"
           }
         >
           <HiSpeakerphone
-            className=" cursor-pointer duration-300 hover:text-secondary"
+            className=" cursor-pointer duration-300 hover:text-secondary dark:hover:text-primary"
             size={20}
           />
         </NavLink>
@@ -90,12 +94,12 @@ const MiniSideBar = () => {
           to="/contact"
           className={({ isActive }) =>
             isActive
-              ? "text-secondary "
-              : "text-gray  duration-300 hover:text-secondary"
+              ? "text-secondary dark:text-black dark:hover:text-primary"
+              : "text-gray duration-300 hover:text-secondary "
           }
         >
           <FaPhoneVolume
-            className=" cursor-pointer duration-300 hover:text-secondary"
+            className=" cursor-pointer duration-300 hover:text-secondary dark:hover:text-primary"
             size={20}
           />
         </NavLink>

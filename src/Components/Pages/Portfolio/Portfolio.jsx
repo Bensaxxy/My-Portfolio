@@ -21,10 +21,10 @@ const Portfolio = () => {
   return (
     <div>
       <div>
-        <div className="container pb-20 md:pb-0 bg-gray py-8 flex flex-col gap-8 w-full">
+        <div className="container pb-20 md:pb-0 bg-gray dark:bg-black py-8 flex flex-col gap-8 w-full">
           <div>
             {/* Resume */}
-            <h1 className=" text-center border px-10 border-zinc-300 tracking-widest font-extrabold text-4xl md:text-5xl lg:text-7xl uppercase">
+            <h1 className=" text-center border px-10 border-zinc-300 tracking-widest font-extrabold text-4xl md:text-5xl lg:text-7xl uppercase dark:text-secondary">
               portfolio
             </h1>
           </div>
@@ -37,8 +37,10 @@ const Portfolio = () => {
                   key={link}
                   onClick={() => handleClick(link)}
                   className={`relative ${
-                    activeLink === link ? "text-primary" : "text-secondary"
-                  } hover:text-secondary transition duration-300`}
+                    activeLink === link
+                      ? "text-primary dark:text-white"
+                      : "text-secondary"
+                  } hover:text-secondary dark:hover:text-gray transition duration-300`}
                 >
                   {link}
                   {/* Animated underline for the active link */}

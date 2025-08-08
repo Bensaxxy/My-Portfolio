@@ -21,9 +21,9 @@ export const Mail = () => {
         () => {
           console.log("SUCCESS!");
           console.log("message sent");
-          form.current.reset(); 
-          setMessageSent(true); 
-          setTimeout(() => setMessageSent(false), 5000); 
+          form.current.reset();
+          setMessageSent(true);
+          setTimeout(() => setMessageSent(false), 5000);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -33,7 +33,9 @@ export const Mail = () => {
 
   return (
     <div>
-      <h1 className=" font-semibold">Write me a message 👇🏾 </h1>
+      <h1 className=" font-semibold dark:text-secondary">
+        Write me a message 👇🏾{" "}
+      </h1>
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
         {/* Name Input */}
         <input
@@ -67,7 +69,7 @@ export const Mail = () => {
           type="submit"
           value="Send"
           rows="4"
-          className="bg-primary text-white font-semibold py-2 rounded hover:bg-primary/90 transition duration-300"
+          className="bg-primary dark:bg-white dark:text-black dark:hover:bg-secondary text-white font-semibold py-2 rounded hover:bg-primary/90 transition duration-300"
         >
           Send Message
         </button>

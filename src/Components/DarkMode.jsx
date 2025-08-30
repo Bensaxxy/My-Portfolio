@@ -24,7 +24,7 @@ const DarkMode = () => {
     <Icon
       onClick={toggleTheme}
       size={20}
-      className="cursor-pointer text-gray duration-300 hover:text-secondary"
+      className="cursor-pointer text-gray duration-300 hover:text-secondary dark:hover:text-primary"
     />
   );
 };

@@ -1,9 +1,9 @@
 /** @format */
 
-import React from "react";
 import { motion } from "framer-motion";
 
 // Motion button component with hover effect
+// eslint-disable-next-line react/prop-types
 const MotionButton = ({ children, variants, ...props }) => {
   return (
     <motion.button

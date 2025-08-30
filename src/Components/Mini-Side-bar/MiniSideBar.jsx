@@ -16,6 +16,7 @@ const MiniSideBar = () => {
         <div className="flex items-center justify-center">
           <DarkMode />
         </div>
+
         {/* Active styling using NavLink */}
         {/* Home link */}
         <NavLink
@@ -23,7 +24,7 @@ const MiniSideBar = () => {
           className={({ isActive }) =>
             isActive
               ? "text-secondary dark:text-black dark:hover:text-primary"
-              : "text-gray duration-300 hover:text-secondary "
+              : "text-gray duration-300 hover:text-secondary dark:hover:text-primary"
           }
         >
           <FaHome className=" cursor-pointer duration-300" size={20} />

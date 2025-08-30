@@ -1,8 +1,7 @@
 /** @format */
 
-// import React from "react";
 import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion"; // Import motion for animations
+import { motion } from "framer-motion";
 import sideImage from "/side-bar-img.jpg";
 
 const MainSideBar = () => {

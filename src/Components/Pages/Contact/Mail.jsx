@@ -6,9 +6,11 @@ import emailjs from "@emailjs/browser";
 export const Mail = () => {
   const form = useRef();
   const [messageSent, setMessageSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -23,10 +25,12 @@ export const Mail = () => {
           // console.log("message sent");
           form.current.reset();
           setMessageSent(true);
+          setLoading(false);
           setTimeout(() => setMessageSent(false), 5000);
         },
         (error) => {
           console.log("FAILED...", error.text);
+          setLoading(false);
         }
       );
   };
@@ -67,11 +71,16 @@ export const Mail = () => {
         {/* Submit Button */}
         <button
           type="submit"
+          disabled={loading}
           value="Send"
           rows="4"
-          className="bg-primary dark:bg-white dark:text-black dark:hover:bg-secondary text-white font-semibold py-2 rounded hover:bg-primary/90 transition duration-300"
+          className={`${
+            loading
+              ? "bg-primary/80 dark:bg-secondary/80 cursor-not-allowed"
+              : "bg-primary hover:bg-primary/90 dark:bg-white dark:text-black dark:hover:bg-secondary"
+          } text-white font-semibold py-2 rounded transition duration-300`}
         >
-          Send Message
+          {loading ? "Sending..." : "Send Message"}
         </button>
       </form>
       {/* Success Message */}

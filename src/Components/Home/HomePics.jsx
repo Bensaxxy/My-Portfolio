@@ -1,13 +1,12 @@
 /** @format */
 
-import React from "react";
 import { motion } from "framer-motion";
 import homeImage from "/ben.jpg";
 
 const HomePics = () => {
   // Animation variants
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.9 }, // Initial state
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
       scale: 1,

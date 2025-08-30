@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 /** @format */
 
-import React from "react";
 import { motion } from "framer-motion";
 
 // Motion text component with variants

@@ -5,8 +5,8 @@ import HomePics from "./HomePics";
 import { Link, useNavigate } from "react-router-dom";
 
 import { motion } from "framer-motion";
-import MotionText from "../Motions/MotionText"; // Import MotionText
-import MotionButton from "../Motions/MotionButton"; // Import MotionButton
+import MotionText from "../Motions/MotionText";
+import MotionButton from "../Motions/MotionButton";
 import SocialLinks from "./SocialLinks";
 
 const Home = () => {

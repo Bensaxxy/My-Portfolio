@@ -84,8 +84,8 @@ const AboutMe = () => {
           >
             {[
               { number: "5+", label: "YEARS EXPERIENCE" },
-              { number: "40+", label: "PROJECTS DONE" },
-              { number: "99+", label: "HAPPY CLIENTS" },
+              { number: "57+", label: "PROJECTS DONE" },
+              { number: "04+", label: "HAPPY CLIENTS" },
               { number: "92+", label: "FOLLOWERS" },
             ].map((stat, index) => (
               <motion.div

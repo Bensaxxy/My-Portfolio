@@ -20,7 +20,7 @@ import MiniSideBar from "./Components/Mini-Side-bar/MiniSideBar";
 const App = () => {
   const location = useLocation(); // Get the current route
 
-  // Define paths where the sidebar should be hidden
+  // paths where the sidebar should be hidden
   const hideSidebarPaths = ["/"];
   const shouldHideSidebar = hideSidebarPaths.includes(location.pathname);
 

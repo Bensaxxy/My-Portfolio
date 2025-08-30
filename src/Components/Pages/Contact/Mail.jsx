@@ -12,15 +12,15 @@ export const Mail = () => {
 
     emailjs
       .sendForm(
-        "service_hzp7jdv",
-        "template_w8mzxpg",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "GAXCU8JPlXM1IbX3s" // Pass the public key directly
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY_ID
       )
       .then(
         () => {
-          console.log("SUCCESS!");
-          console.log("message sent");
+          // console.log("SUCCESS!");
+          // console.log("message sent");
           form.current.reset();
           setMessageSent(true);
           setTimeout(() => setMessageSent(false), 5000);

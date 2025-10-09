@@ -3,6 +3,15 @@
 const data = [
   {
     id: 1,
+    title: "Weather App",
+    imageUrl: "./weatherApp.jpg",
+    links: {
+      demo: "https://weather-app-two-pi-36.vercel.app/",
+      code: "https://github.com/Bensaxxy/Weather-app",
+    },
+  },
+  {
+    id: 2,
     title: "Nexus Botix",
     imageUrl: "./nexusbotix.png",
     links: {
@@ -10,7 +19,7 @@ const data = [
     },
   },
   {
-    id: 2,
+    id: 3,
     title: "Clone Netflix",
     imageUrl: "./netflix-img.png",
     links: {
@@ -19,7 +28,7 @@ const data = [
     },
   },
   {
-    id: 3,
+    id: 4,
     title: "Galkon Heights Business Center",
     imageUrl: "./Galkon Heights.png",
     links: {
@@ -28,7 +37,7 @@ const data = [
     },
   },
   {
-    id: 4,
+    id: 5,
     title: "Audiophile",
     imageUrl: "./Audiop.png",
     links: {
@@ -37,7 +46,7 @@ const data = [
     },
   },
   {
-    id: 5,
+    id: 6,
     title: "Multi-step form",
     imageUrl: "./multi-step-form.png",
     links: {
@@ -46,7 +55,7 @@ const data = [
     },
   },
   {
-    id: 6,
+    id: 7,
     title: "Shoe E-commerce",
     imageUrl: "./show-ecommece.png",
     links: {
@@ -56,7 +65,7 @@ const data = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Product List",
     imageUrl: "./Product-list.png",
     links: {
@@ -65,7 +74,7 @@ const data = [
     },
   },
   {
-    id: 8,
+    id: 9,
     title: "Alinee Photographer Portfolio",
     imageUrl: "./alinee-photo.png",
     links: {
@@ -74,7 +83,7 @@ const data = [
     },
   },
   {
-    id: 9,
+    id: 10,
     title: "Age Calculator",
     imageUrl: "./age-cal.png",
     links: {

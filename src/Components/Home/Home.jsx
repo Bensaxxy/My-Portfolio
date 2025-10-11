@@ -70,6 +70,7 @@ const Home = () => {
     >
       {/* left section with content */}
       <div className="w-full px-4 md:px-6 flex h-screen justify-center items-start flex-col gap-4">
+        {/* <img src="/benCodes Logo png.png" alt="logo" className="w-24" /> */}
         <MotionText
           variants={textVariants}
           className="uppercase text-black dark:text-gray font-bold text-[18px] md:text-2xl"

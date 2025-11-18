@@ -66,7 +66,7 @@ const AboutMe = () => {
             Frontend Developer / Graphic Designer
           </h2>
           <p className="text-sm text-center md:text-left md:text-[15px] leading-7 mb-6 dark:text-white">
-            With 5 years of experience in frontend development, I&apos;ve honed
+            With 4 years of experience in frontend development, I&apos;ve honed
             my skills in crafting responsive, accessible, and high-performance
             web applications using Git, Github, HTML, CSS, JavaScript, and
             popular frameworks like Bootstrap, TailwindCSS, React and NextJs.
@@ -83,7 +83,7 @@ const AboutMe = () => {
             className="bg-black dark:bg-white p-10 grid gap-8 grid-cols-2 md:grid-cols-2"
           >
             {[
-              { number: "5+", label: "YEARS EXPERIENCE" },
+              { number: "4+", label: "YEARS EXPERIENCE" },
               { number: "57+", label: "PROJECTS DONE" },
               { number: "04+", label: "HAPPY CLIENTS" },
               { number: "92+", label: "FOLLOWERS" },

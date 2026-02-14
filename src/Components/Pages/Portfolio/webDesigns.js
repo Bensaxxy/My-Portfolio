@@ -84,6 +84,15 @@ const data = [
   },
   {
     id: 10,
+    title: "Github Profile Viewer",
+    imageUrl: "./GithubProfileViewer.png",
+    links: {
+      demo: "https://github-profile-viewer-orpin.vercel.app/",
+      code: "https://github.com/Bensaxxy/Github-Profile-Viewer",
+    },
+  },
+  {
+    id: 11,
     title: "Age Calculator",
     imageUrl: "./age-cal.png",
     links: {

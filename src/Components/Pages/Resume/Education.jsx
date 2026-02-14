@@ -13,7 +13,7 @@ const Education = () => {
           <div>
             <div className="bg-primary dark:bg-secondary py-2 px-4 rounded-sm">
               <h1 className=" text-gray dark:text-black">
-                Federal Polytecnic Nasarawa (HND): (2024/2025)
+                Federal Polytecnic Nasarawa (HND): (2023/2025)
               </h1>
             </div>
             <h1 className=" uppercase my-2 font-semibold dark:text-white">
@@ -29,7 +29,7 @@ const Education = () => {
           <div>
             <div className="bg-primary dark:bg-secondary py-2 px-4 rounded-sm">
               <h1 className=" text-gray dark:text-black">
-                Federal Polytecnic Nasarawa (ND): (2018/2019)
+                Federal Polytecnic Nasarawa (ND): (2018/2020)
               </h1>
             </div>
             <h1 className=" uppercase my-2 font-semibold dark:text-white ">

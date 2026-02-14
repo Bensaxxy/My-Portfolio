@@ -26,7 +26,7 @@ const SocialLinks = () => {
           size={22}
         />
       </a>
-      <a href="https://www.linkedin.com/in/oluwasegun-benjamin-a80b76252/">
+      <a href="https://www.linkedin.com/in/oluwasegun-benjamin-a80b76252/" target="_blank">
         <FaLinkedin
           className="text-secondary hover:text-primary dark:hover:text-white duration-300"
           size={22}

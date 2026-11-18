@@ -1,6 +1,7 @@
 /** @format */
 
 // import React from "react";
+import { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,8 +18,49 @@ import Testimonials from "./Components/Pages/Testimonials";
 import Contact from "./Components/Pages/Contact/Contact";
 import MiniSideBar from "./Components/Mini-Side-bar/MiniSideBar";
 
+const pageMetadata = {
+  "/": {
+    title: "Oluwasegun Benjamin | Frontend Developer",
+    description: "Portfolio of Oluwasegun Benjamin, a frontend developer building responsive, accessible React interfaces.",
+  },
+  "/about-me": {
+    title: "About | Oluwasegun Benjamin",
+    description: "Learn about Oluwasegun Benjamin, a frontend developer focused on accessible, polished web experiences.",
+  },
+  "/resume": {
+    title: "Experience & Education | Oluwasegun Benjamin",
+    description: "Explore Oluwasegun Benjamin's frontend engineering experience, professional background, and education.",
+  },
+  "/portfolio": {
+    title: "Selected Work | Oluwasegun Benjamin",
+    description: "Selected frontend projects and visual design work by Oluwasegun Benjamin.",
+  },
+  "/testimonials": {
+    title: "Testimonials | Oluwasegun Benjamin",
+    description: "Feedback from collaborators who have worked with Oluwasegun Benjamin.",
+  },
+  "/contact": {
+    title: "Contact | Oluwasegun Benjamin",
+    description: "Contact Oluwasegun Benjamin for frontend roles, product collaborations, and freelance opportunities.",
+  },
+};
+const siteUrl = "https://benjamincodes-portfolio.vercel.app";
+
 const App = () => {
   const location = useLocation(); // Get the current route
+  const metadata = pageMetadata[location.pathname] || pageMetadata["/"];
+
+  useEffect(() => {
+    const pageUrl = `${siteUrl}${location.pathname === "/" ? "/" : location.pathname}`;
+    document.title = metadata.title;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", metadata.description);
+    document.querySelector('meta[property="og:title"]')?.setAttribute("content", metadata.title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute("content", metadata.description);
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content", pageUrl);
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute("content", metadata.title);
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute("content", metadata.description);
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", pageUrl);
+  }, [location.pathname, metadata]);
 
   // paths where the sidebar should be hidden
   const hideSidebarPaths = ["/"];

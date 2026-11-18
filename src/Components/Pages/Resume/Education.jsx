@@ -5,43 +5,21 @@
 const Education = () => {
   return (
     <div>
-      <div>
-        <h1 className=" uppercase font-semibold text-xl mb-4 dark:text-white">
-          Education
-        </h1>
-        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div>
-            <div className="bg-primary dark:bg-secondary py-2 px-4 rounded-sm">
-              <h1 className=" text-gray dark:text-black">
-                Federal Polytecnic Nasarawa (HND): (2023/2025)
-              </h1>
-            </div>
-            <h1 className=" uppercase my-2 font-semibold dark:text-white">
-              Computer Science
-            </h1>
-            <p className=" font-light dark:text-white">
-              This is also a 2-year program that builds on the foundation
-              provided by the ND program, which includes Database Systems,
-              Artificial Intelligence and Machine Learning, Project Management
-              etc...
-            </p>
-          </div>
-          <div>
-            <div className="bg-primary dark:bg-secondary py-2 px-4 rounded-sm">
-              <h1 className=" text-gray dark:text-black">
-                Federal Polytecnic Nasarawa (ND): (2018/2020)
-              </h1>
-            </div>
-            <h1 className=" uppercase my-2 font-semibold dark:text-white ">
-              Computer Science
-            </h1>
-            <p className=" font-light dark:text-white ">
-              This is a 2-year program that provides a foundation in computer
-              science and information technology which includes Programming
-              Fundamentals, Web Development etc...
-            </p>
-          </div>
-        </div>
+      <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary dark:text-secondary">Education</p>
+      <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Computer Science</h2>
+      <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
+        <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/[0.03]">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary dark:text-secondary">2023 — 2025</p>
+          <h3 className="mt-3 text-xl font-bold">Higher National Diploma</h3>
+          <p className="mt-1 text-sm font-semibold text-slate-500 dark:text-zinc-400">Federal Polytechnic Nasarawa</p>
+          <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-zinc-300">Advanced study in Computer Science, including database systems, artificial intelligence and machine learning, and project management.</p>
+        </article>
+        <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/[0.03]">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary dark:text-secondary">2018 — 2020</p>
+          <h3 className="mt-3 text-xl font-bold">National Diploma</h3>
+          <p className="mt-1 text-sm font-semibold text-slate-500 dark:text-zinc-400">Federal Polytechnic Nasarawa</p>
+          <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-zinc-300">A foundation in Computer Science and information technology, including programming fundamentals and web development.</p>
+        </article>
       </div>
     </div>
   );

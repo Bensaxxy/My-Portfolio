@@ -32,12 +32,12 @@ const App = () => {
   };
 
   return (
-    <div className="flex font-primary">
+    <div className="flex min-h-screen bg-[#f8f8fc] font-primary text-slate-950 transition-colors dark:bg-[#09090b] dark:text-white">
       {/* Conditionally render the sidebar */}
       {!shouldHideSidebar && <MainSideBar />}
 
       {/* Main Content */}
-      <div className="flex-grow">
+      <div className="min-w-0 flex-1">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route
@@ -122,7 +122,7 @@ const App = () => {
         </AnimatePresence>
       </div>
       {/* Mini Sidebar */}
-      <div className="fixed bottom-4 md:bottom-0 md:top-1/2 md:right-2 md:transform md:-translate-y-1/2 w-full md:w-auto flex justify-center items-center">
+      <div className="fixed inset-x-0 bottom-4 z-50 flex justify-center px-4 lg:hidden">
         <MiniSideBar />
       </div>
     </div>

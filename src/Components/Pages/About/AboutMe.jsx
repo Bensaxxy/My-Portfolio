@@ -1,171 +1,87 @@
-/** @format */
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FiArrowUpRight } from "react-icons/fi";
 
-// import React from "react";
-import { motion } from "framer-motion"; // Import framer-motion
-import printDesign from "/print-design.png";
-import webDesign from "/web-design.png";
+const highlights = [
+  { value: "4+", label: "Years in digital work" },
+  { value: "React", label: "Frontend specialization" },
+  { value: "12", label: "Core tools and workflows" },
+  { value: "Remote", label: "Collaboration experience" },
+];
 
-const AboutMe = () => {
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeInOut", staggerChildren: 0.2 },
-    },
-    exit: {
-      opacity: 0,
-      y: -50,
-      transition: { duration: 0.6, ease: "easeInOut" },
-    },
-  };
+const technologies = [
+  "React",
+  "Next.js",
+  "JavaScript",
+  "TypeScript",
+  "Tailwind CSS",
+  "HTML & CSS",
+  "Git & GitHub",
+  "Framer Motion",
+  "REST APIs",
+  "Vite",
+];
 
-  const childVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeInOut" },
-    },
-  };
+const AboutMe = () => (
+  <main className="min-h-screen px-5 py-10 pb-28 sm:px-8 lg:px-12 lg:py-14">
+    <div className="mx-auto max-w-6xl">
+      <motion.header
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45 }}
+        className="max-w-3xl"
+      >
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary dark:text-secondary">About me</p>
+        <h1 className="mt-4 text-4xl font-black tracking-[-0.045em] sm:text-5xl lg:text-6xl">
+          I care about the details people feel, not just the code they see.
+        </h1>
+        <p className="mt-6 text-base leading-8 text-slate-600 dark:text-zinc-300 sm:text-lg">
+          I&apos;m Oluwasegun Benjamin, a frontend developer with a design background. I turn product ideas into responsive, accessible interfaces that are clear, fast, and enjoyable to use.
+        </p>
+      </motion.header>
 
-  const statsVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
+      <section className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" aria-label="Professional highlights">
+        {highlights.map((item, index) => (
+          <motion.div
+            key={item.label}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.06 }}
+            className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-white/10 dark:bg-white/[0.03]"
+          >
+            <p className="text-3xl font-black tracking-tight text-primary dark:text-secondary">{item.value}</p>
+            <p className="mt-2 text-sm text-slate-600 dark:text-zinc-300">{item.label}</p>
+          </motion.div>
+        ))}
+      </section>
 
-  const stats = [
-    {
-      number: "4+",
-      title: "Years Experience",
-    },
-    {
-      number: "50+",
-      title: "Projects Completed",
-    },
-    {
-      number: "10+",
-      title: "Technologies",
-    },
-    {
-      number: "100%",
-      title: "Commitment",
-    },
-  ];
+      <section className="mt-16 grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:gap-16">
+        <div>
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">How I work</h2>
+          <div className="mt-6 space-y-5 text-[0.98rem] leading-8 text-slate-600 dark:text-zinc-300">
+            <p>I approach frontend work as both an engineering and communication problem: understand the goal, make the interface easy to navigate, and build it with maintainable components.</p>
+            <p>My toolkit centres on React, JavaScript, TypeScript, Tailwind CSS, and modern browser APIs. I enjoy collaborating with designers and backend engineers to bring complete product experiences to life.</p>
+            <p>Before shipping, I pay attention to responsive behaviour, semantic structure, keyboard access, and the small interaction details that make an interface feel considered.</p>
+          </div>
+          <Link to="/portfolio" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#2a0875] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:bg-secondary dark:text-black dark:hover:bg-white">
+            See selected work <FiArrowUpRight aria-hidden="true" />
+          </Link>
+        </div>
 
-  const technologies = [
-    "React",
-    "Next.js",
-    "JavaScript",
-    "TypeScript",
-    "Tailwind CSS",
-    "HTML5",
-    "CSS3",
-    "Git",
-    "GitHub",
-    "Framer Motion",
-    "REST APIs",
-    "Vite",
-  ];
-
-  return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      variants={containerVariants}
-      className="w-full bg-gray-50 dark:bg-black py-20"
-    >
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Heading */}
-        <motion.div variants={childVariants} className="text-center">
-          <p className="uppercase tracking-[6px] text-secondary font-semibold">
-            About Me
-          </p>
-
-          <h1 className="text-4xl md:text-6xl font-black mt-4 dark:text-white">
-            Hi, I'm <span className="text-secondary">Oluwasegun Benjamin</span>
-          </h1>
-
-          <h3 className="mt-5 text-xl text-zinc-600 dark:text-zinc-300">
-            Frontend Developer • React Developer • UI Engineer
-          </h3>
-        </motion.div>
-
-        {/* About */}
-        <motion.div
-          variants={childVariants}
-          className="max-w-4xl mx-auto mt-12 space-y-6 text-center"
-        >
-          <p className="text-lg leading-9 text-zinc-600 dark:text-zinc-400">
-            I'm a passionate Frontend Developer with over four years of
-            experience building modern, responsive and high-performance web
-            applications.
-          </p>
-
-          <p className="text-lg leading-9 text-zinc-600 dark:text-zinc-400">
-            I specialize in React, Next.js, TypeScript, JavaScript, Tailwind CSS
-            and modern frontend technologies, focusing on clean architecture,
-            scalability and excellent user experiences.
-          </p>
-
-          <p className="text-lg leading-9 text-zinc-600 dark:text-zinc-400">
-            I enjoy solving problems, learning new technologies and transforming
-            ideas into beautiful digital products.
-          </p>
-        </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          variants={statsVariants}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-20"
-        >
-          {stats.map((item) => (
-            <motion.div
-              key={item.title}
-              whileHover={{
-                scale: 1.05,
-                y: -8,
-              }}
-              className="rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-lg p-8 text-center"
-            >
-              <h2 className="text-5xl font-black text-secondary">
-                {item.number}
-              </h2>
-
-              <p className="uppercase tracking-widest text-sm mt-4 text-zinc-500">
-                {item.title}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Technologies */}
-        <motion.div variants={childVariants} className="mt-24">
-          <h2 className="text-3xl md:text-4xl font-bold text-center dark:text-white">
-            Technologies I Work With
-          </h2>
-
-          <div className="flex flex-wrap justify-center gap-4 mt-10">
+        <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 dark:border-white/10 dark:bg-white/[0.03] sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary dark:text-secondary">Toolkit</p>
+          <h2 className="mt-3 text-2xl font-bold tracking-tight">Technologies I use</h2>
+          <div className="mt-7 flex flex-wrap gap-2.5">
             {technologies.map((tech) => (
-              <motion.div
-                key={tech}
-                whileHover={{ scale: 1.08 }}
-                className="px-6 py-3 rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 shadow-md font-medium dark:text-white"
-              >
+              <span key={tech} className="rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-semibold text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200">
                 {tech}
-              </motion.div>
+              </span>
             ))}
           </div>
-        </motion.div>
-      </div>
-    </motion.div>
-  );
-};
+        </div>
+      </section>
+    </div>
+  </main>
+);
 
 export default AboutMe;

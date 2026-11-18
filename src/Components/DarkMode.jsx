@@ -21,11 +21,14 @@ const DarkMode = () => {
   const Icon = theme === "dark" ? MdNightlightRound : MdOutlineLightMode;
 
   return (
-    <Icon
+    <button
+      type="button"
       onClick={toggleTheme}
-      size={20}
-      className="cursor-pointer text-gray duration-300 hover:text-secondary dark:hover:text-primary"
-    />
+      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+      className="grid h-9 w-9 place-items-center rounded-xl text-white/75 transition hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/70 dark:text-black/65 dark:hover:bg-black/10 dark:hover:text-black"
+    >
+      <Icon size={18} aria-hidden="true" />
+    </button>
   );
 };
 

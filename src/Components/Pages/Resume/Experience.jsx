@@ -4,27 +4,18 @@ import { experienceData } from "./experienceData";
 
 const Experience = () => {
   return (
-    <div className="mb-10">
+    <div>
       <div>
-        <h1 className="uppercase font-semibold text-xl mb-4 dark:text-white">
-          Experience
-        </h1>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary dark:text-secondary">Career</p>
+        <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Experience</h2>
+        <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
           {experienceData.map((item, index) => (
-            <div key={index}>
-              <div className="bg-primary py-2 px-4 rounded-sm dark:bg-secondary ">
-                <h1 className="text-gray dark:text-black">
-                  {item.company}: ({item.year})
-                </h1>
-              </div>
-
-              <h1 className="uppercase my-2 font-semibold dark:text-white">
-                {item.role}
-              </h1>
-
-              <p className="font-light dark:text-white">{item.description}</p>
-            </div>
+            <article key={`${item.company}-${index}`} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/[0.03]">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary dark:text-secondary">{item.year}</p>
+              <h3 className="mt-3 text-xl font-bold tracking-tight">{item.role}</h3>
+              <p className="mt-1 text-sm font-semibold text-slate-500 dark:text-zinc-400">{item.company}</p>
+              <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-zinc-300">{item.description}</p>
+            </article>
           ))}
         </div>
       </div>

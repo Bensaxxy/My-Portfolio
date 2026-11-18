@@ -1,18 +1,10 @@
 /** @format */
 
-// import React from "react";
-import { CiPhone } from "react-icons/ci";
-
 const PhoneCall = () => {
   return (
-    <div>
-      <div className=" flex gap-2 items-center dark:text-white">
-        <CiPhone size={100} />
-        <div className=" flex flex-col ">
-          <span>+234(0) 810 569 1875</span>
-          <span>+234 (0) 705 480 9364</span>
-        </div>
-      </div>
+    <div className="mt-1 flex flex-col gap-1 text-sm font-semibold text-slate-800 dark:text-zinc-100">
+      <a href="tel:+2348105691875" className="transition hover:text-primary dark:hover:text-secondary">+234 (0) 810 569 1875</a>
+      <a href="tel:+2347054809364" className="transition hover:text-primary dark:hover:text-secondary">+234 (0) 705 480 9364</a>
     </div>
   );
 };

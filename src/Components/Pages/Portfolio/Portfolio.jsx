@@ -1,78 +1,55 @@
-/** @format */
 import { useState } from "react";
 import { motion } from "framer-motion";
-import WebDesign from "./WebDesign.jsx";
+import WebDesign from "./WebDesign";
 import GraphicDesign from "./GraphicDesign";
 
+const tabs = ["Web development", "Graphic design"];
+
 const Portfolio = () => {
-  const [activeLink, setActiveLink] = useState("Web design");
-
-  // Map active links to components
-  const components = {
-    "Web design": <WebDesign />,
-    "Graphic Design": <GraphicDesign />,
-  };
-
-  // Handle link click
-  const handleClick = (link) => {
-    setActiveLink(link);
-  };
+  const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <div>
-      <div>
-        <div className="container pb-20 md:pb-0 bg-gray dark:bg-black py-8 flex flex-col gap-8 w-full">
-          <div>
-            {/* Resume */}
-            <h1 className=" text-center border px-10 border-zinc-300 tracking-widest font-extrabold text-4xl md:text-5xl lg:text-7xl uppercase dark:text-secondary">
-              portfolio
-            </h1>
-          </div>
+    <main className="min-h-screen px-5 py-10 pb-28 sm:px-8 lg:px-12 lg:py-14">
+      <div className="mx-auto max-w-7xl">
+        <header className="max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary dark:text-secondary">Selected work</p>
+          <h1 className="mt-4 text-4xl font-black tracking-[-0.045em] sm:text-5xl lg:text-6xl">Practical work with a product mindset.</h1>
+          <p className="mt-6 text-base leading-8 text-slate-600 dark:text-zinc-300 sm:text-lg">
+            A focused selection of web projects and visual design work. Each piece represents an effort to make a clear, useful, and polished experience.
+          </p>
+        </header>
 
-          <div className="flex flex-col items-center">
-            {/* Navigation Links */}
-            <div className="flex gap-6 justify-center font-semibold text-xl">
-              {["Web design", "Graphic Design"].map((link) => (
-                <button
-                  key={link}
-                  onClick={() => handleClick(link)}
-                  className={`relative ${
-                    activeLink === link
-                      ? "text-primary dark:text-white"
-                      : "text-secondary"
-                  } hover:text-secondary dark:hover:text-gray transition duration-300`}
-                >
-                  {link}
-                  {/* Animated underline for the active link */}
-                  {activeLink === link && (
-                    <motion.div
-                      layoutId="underline"
-                      className="absolute -bottom-1 left-0 h-[2px] w-full bg-secondary"
-                      initial={{ opacity: 0, scaleX: 0 }}
-                      animate={{ opacity: 1, scaleX: 1 }}
-                      exit={{ opacity: 0, scaleX: 0 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  )}
-                </button>
-              ))}
-            </div>
-
-            {/* Component Rendering Section */}
-            <motion.div
-              key={activeLink}
-              className="mt-8 p-6 w-full border border-black/10 rounded-lg shadow-md"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
+        <div className="mt-10 flex w-fit rounded-xl border border-slate-200 bg-white p-1.5 dark:border-white/10 dark:bg-white/[0.03]" role="tablist" aria-label="Portfolio categories">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              type="button"
+              role="tab"
+              aria-selected={activeTab === tab}
+              onClick={() => setActiveTab(tab)}
+              className={`rounded-lg px-4 py-2 text-sm font-bold transition sm:px-5 ${
+                activeTab === tab
+                  ? "bg-primary text-white shadow-sm dark:bg-secondary dark:text-black"
+                  : "text-slate-500 hover:text-primary dark:text-zinc-400 dark:hover:text-secondary"
+              }`}
             >
-              {components[activeLink]} {/* Render the active component */}
-            </motion.div>
-          </div>
+              {tab}
+            </button>
+          ))}
         </div>
+
+        <motion.div
+          key={activeTab}
+          role="tabpanel"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mt-8"
+        >
+          {activeTab === "Web development" ? <WebDesign /> : <GraphicDesign />}
+        </motion.div>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -1,5 +1,17 @@
 const projects = [
   {
+    id: 1,
+    title: "ChatFlow",
+    type: "Messaging application",
+    description: "A responsive chat experience designed to keep conversations clear, fast, and easy to follow.",
+    tags: ["Messaging UX", "Responsive UI"],
+    imageUrl: "/ChatFlow.png",
+    links: {
+      demo: "https://chat-flow-4tcp.vercel.app/",
+      code: "https://github.com/Bensaxxy/chatFlow",
+    },
+  },
+  {
     id: 2,
     title: "Nexus Botix",
     type: "Company website",
